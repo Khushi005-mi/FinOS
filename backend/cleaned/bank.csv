@@ -1,0 +1,4 @@
+transaction_id,date,description,amount,type,balance
+TXN001,2026-04-01,Invoice Payment INV001,20000,credit,520000
+TXN002,2026-04-02,Raw Material Purchase,-150000,debit,370000
+TXN003,2026-04-05,Salary Payout,-800000,debit,-430000

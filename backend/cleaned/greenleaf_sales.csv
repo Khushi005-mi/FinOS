@@ -1,0 +1,11 @@
+invoice_id,date,customer,product,quantity,unit_price,revenue
+INV001,2026-04-01,Delhi Public School,Notebooks,5000,70,350000
+INV002,2026-04-03,Acme Corporate Office,Pens,8000,25,200000
+INV003,2026-04-05,St Xavier College,Files,2000,75,150000
+INV004,2026-04-07,National Distributors,Notebooks,3000,65,195000
+INV005,2026-04-09,Rajasthan Govt School,Packaging Materials,4000,25,100000
+INV006,2026-04-12,Mumbai Stationery Co,Pens,4000,25,100000
+INV007,2026-04-15,Delhi Public School,Folders,1500,80,120000
+INV008,2026-04-18,Acme Corporate Office,Notebooks,2000,70,140000
+INV009,2026-04-20,St Xavier College,Pens,3000,25,75000
+INV010,2026-04-25,National Distributors,Files,1000,75,75000

@@ -1,0 +1,11 @@
+transaction_id,date,description,amount,type,balance
+TXN001,2026-04-01,Opening Balance,,credit,5000000
+TXN002,2026-04-03,Payment INV001 Delhi Public School,350000,credit,5350000
+TXN003,2026-04-05,Paper Suppliers Ltd Payment,-1200000,debit,4150000
+TXN004,2026-04-07,Payment INV002 Acme Corporate,200000,credit,4350000
+TXN005,2026-04-09,Salary Disbursement,-850000,debit,3500000
+TXN006,2026-04-12,Payment INV003 St Xavier,150000,credit,3650000
+TXN007,2026-04-15,Factory Rent Payment,-425000,debit,3225000
+TXN008,2026-04-18,Payment INV004 National Distributors,195000,credit,3420000
+TXN009,2026-04-20,BlueDart Logistics Payment,-280000,debit,3140000
+TXN010,2026-04-25,Payment INV005 Rajasthan Govt,100000,credit,3240000

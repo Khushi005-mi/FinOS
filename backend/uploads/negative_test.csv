@@ -1,0 +1,4 @@
+invoice_id,customer,revenue
+INV001,Delhi School,20000
+INV002,Acme Corp,-5000
+INV003,National Distributors,57000

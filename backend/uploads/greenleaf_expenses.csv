@@ -1,0 +1,11 @@
+expense_id,date,category,vendor,amount
+EXP001,2026-04-01,Raw Material,Paper Suppliers Ltd,1200000
+EXP002,2026-04-05,Raw Material,Ink Manufacturers India,400000
+EXP003,2026-04-07,Salaries,Internal Payroll,850000
+EXP004,2026-04-10,Factory Rent,GreenLeaf Properties,425000
+EXP005,2026-04-12,Logistics,BlueDart Express,280000
+EXP006,2026-04-15,Utilities,JVVNL Electric,180000
+EXP007,2026-04-18,Marketing,Digital Agency Jaipur,150000
+EXP008,2026-04-20,Logistics,DTDC Courier,145000
+EXP009,2026-04-25,Miscellaneous,Various,220000
+EXP010,2026-04-28,Raw Material,Plastic Components Co,350000
