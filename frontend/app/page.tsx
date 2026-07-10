@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 
 export default function Dashboard() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState<any>(null)
   const client_id = "f1e0c59b-73ff-4a4c-b963-9c62ed68721d"
 
   useEffect(() => {
