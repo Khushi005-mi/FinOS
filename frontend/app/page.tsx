@@ -6,7 +6,7 @@ export default function Dashboard() {
   const client_id = "f1e0c59b-73ff-4a4c-b963-9c62ed68721d"
 
   useEffect(() => {
-    fetch(`http://localhost:8000/intelligence/${client_id}`)
+    fetch(`https://finos-backend.vercel.app/intelligence/${client_id}`)
       .then(res => res.json())
       .then(json => setData(json))
   }, [])
