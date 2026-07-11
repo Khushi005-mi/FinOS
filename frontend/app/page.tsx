@@ -1,65 +1,230 @@
 "use client"
-import { useState, useEffect } from "react"
 
-export default function Dashboard() {
-  const [data, setData] = useState<any>(null)
-  const client_id = "f1e0c59b-73ff-4a4c-b963-9c62ed68721d"
-
-  useEffect(() => {
-    fetch(`https://finos-backend.vercel.app/intelligence/${client_id}`)
-      .then(res => res.json())
-      .then(json => setData(json))
-  }, [])
-
-  if (!data) return <div className="p-8">Loading FinOS...</div>
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1  className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900">FinOS</h1>
-        <p className="text-xl text-gray-600 mt-1">GreenLeaf Supplies — Financial Intelligence</p>
-        <p className="text-sm text-gray-400 mt-1">Manufacturing | Jaipur, India | INR</p>
-     
-      </h1>
-      <div className="grid grid-cols-3 gap-6">
-
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Total Revenue</p>
-          <p className="text-2xl font-bold text-green-600">
-            ₹{data.revenue.total_revenue.toLocaleString()}
-          </p>
+    <div style={{backgroundColor: "#0A0A0A", minHeight: "100vh", color: "white"}}>
+    {/* Navigation */}
+    <nav style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "20px 60px",
+        borderBottom: "1px solid #1E1E1E"
+      }}>
+        <span style={{fontSize: "24px", fontWeight: "bold", color: "#00D4AA"}}>
+          FinOS
+        </span>
+        <button style={{
+          backgroundColor: "#00D4AA",
+          color: "#0A0A0A",
+          border: "none",
+          padding: "10px 24px",
+          borderRadius: "8px",
+          fontWeight: "bold",
+          cursor: "pointer",
+          fontSize: "14px"
+        }}>
+          Get Started
+        </button>
+      </nav>
+      {/* Hero Section */}
+      <div style={{
+        textAlign: "center",
+        padding: "120px 60px 80px",
+        maxWidth: "800px",
+        margin: "0 auto"
+      }}>
+        <div style={{
+          display: "inline-block",
+          backgroundColor: "#111111",
+          border: "1px solid #1E1E1E",
+          borderRadius: "20px",
+          padding: "6px 16px",
+          fontSize: "12px",
+          color: "#00D4AA",
+          marginBottom: "32px",
+          letterSpacing: "1px"
+        }}>
+          FINANCIAL INTELLIGENCE FOR INDIAN BUSINESSES
         </div>
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Total Expenses</p>
-          <p className="text-2xl font-bold text-red-600">
-            ₹{data.expenses.total_expense.toLocaleString()}
-          </p>
+
+        <h1 style={{
+          fontSize: "56px",
+          fontWeight: "800",
+          lineHeight: "1.1",
+          marginBottom: "24px",
+          background: "linear-gradient(135deg, #FFFFFF 0%, #888888 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent"
+        }}>
+          Understand where your money comes from, where it goes, and how your business performs.
+        </h1>
+
+        <p style={{
+          fontSize: "18px",
+          color: "#888888",
+          marginBottom: "40px",
+          lineHeight: "1.6"
+        }}>
+          Upload your sales, expenses and bank data. Get instant financial intelligence. No accountant needed.
+        </p>
+
+        <div style={{display: "flex", gap: "16px", justifyContent: "center"}}>
+          <button style={{
+            backgroundColor: "#00D4AA",
+            color: "#0A0A0A",
+            border: "none",
+            padding: "14px 32px",
+            borderRadius: "8px",
+            fontWeight: "bold",
+            cursor: "pointer",
+            fontSize: "16px"
+          }}>
+            Start Free → 
+          </button>
+          <button style={{
+            backgroundColor: "transparent",
+            color: "#FFFFFF",
+            border: "1px solid #1E1E1E",
+            padding: "14px 32px",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontSize: "16px"
+          }}>
+            See how it works
+          </button>
         </div>
       </div>
-      <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Net Cash Position</p>
-          <p className="text-2xl font-bold text-purple-600">
-            ₹{data.cash.net_cash.toLocaleString()}
-          </p>
+      {/* Features Section */}
+      <div style={{
+        padding: "80px 60px",
+        maxWidth: "1100px",
+        margin: "0 auto"
+      }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "24px"
+        }}>
+
+          {/* Feature 1 */}
+          <div style={{
+            backgroundColor: "#111111",
+            border: "1px solid #1E1E1E",
+            borderRadius: "16px",
+            padding: "32px"
+          }}>
+            <div style={{fontSize: "32px", marginBottom: "16px"}}>📊</div>
+            <h3 style={{fontSize: "20px", fontWeight: "bold", marginBottom: "12px", color: "#FFFFFF"}}>
+              Revenue Intelligence
+            </h3>
+            <p style={{color: "#888888", lineHeight: "1.6", fontSize: "14px"}}>
+              Know your total revenue, top customers, and best-performing products instantly.
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div style={{
+            backgroundColor: "#111111",
+            border: "1px solid #1E1E1E",
+            borderRadius: "16px",
+            padding: "32px"
+          }}>
+            <div style={{fontSize: "32px", marginBottom: "16px"}}>💰</div>
+            <h3 style={{fontSize: "20px", fontWeight: "bold", marginBottom: "12px", color: "#FFFFFF"}}>
+              Profit Visibility
+            </h3>
+            <p style={{color: "#888888", lineHeight: "1.6", fontSize: "14px"}}>
+              See your gross profit, net profit, and profit margin without waiting for your accountant.
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div style={{
+            backgroundColor: "#111111",
+            border: "1px solid #1E1E1E",
+            borderRadius: "16px",
+            padding: "32px"
+          }}>
+            <div style={{fontSize: "32px", marginBottom: "16px"}}>🏦</div>
+            <h3 style={{fontSize: "20px", fontWeight: "bold", marginBottom: "12px", color: "#FFFFFF"}}>
+              Cash Flow Alerts
+            </h3>
+            <p style={{color: "#888888", lineHeight: "1.6", fontSize: "14px"}}>
+              Get warned before your cash runs low. Never be surprised by your bank balance again.
+            </p>
+          </div>
+
         </div>
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Gross Profit</p>
-          <p className="text-2xl font-bold text-blue-600">
-            ₹{data.profit.gross_profit.toLocaleString()}
-          </p>
+      </div>
+      {/* Stats Section */}
+      <div style={{
+        padding: "60px",
+        borderTop: "1px solid #1E1E1E",
+        borderBottom: "1px solid #1E1E1E",
+        display: "flex",
+        justifyContent: "center",
+        gap: "80px",
+        textAlign: "center"
+      }}>
+        <div>
+          <div style={{fontSize: "40px", fontWeight: "800", color: "#00D4AA"}}>6 Days</div>
+          <div style={{color: "#888888", marginTop: "8px"}}>Saved per month on reporting</div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Top Customer</p>
-          <p className="text-2xl font-bold text-yellow-600">
-            {data.customers.best_customer}
-          </p>
+        <div>
+          <div style={{fontSize: "40px", fontWeight: "800", color: "#00D4AA"}}>100%</div>
+          <div style={{color: "#888888", marginTop: "8px"}}>Accurate financial data</div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow">
-          <p className="text-gray-500 text-sm">Profit Margin</p>
-          <p className="text-2xl font-bold text-orange-600">
-            {data.profit.profit_margin}%
-          </p>
+        <div>
+          <div style={{fontSize: "40px", fontWeight: "800", color: "#00D4AA"}}>Real-time</div>
+          <div style={{color: "#888888", marginTop: "8px"}}>Financial intelligence</div>
         </div>
+      </div>
+
+      {/* CTA Section */}
+      <div style={{
+        textAlign: "center",
+        padding: "100px 60px"
+      }}>
+        <h2 style={{
+          fontSize: "40px",
+          fontWeight: "800",
+          marginBottom: "16px",
+          color: "#FFFFFF"
+        }}>
+          Ready to understand your business?
+        </h2>
+        <p style={{color: "#888888", marginBottom: "40px", fontSize: "18px"}}>
+          Upload your data today. Get insights in minutes.
+        </p>
+        <button style={{
+          backgroundColor: "#00D4AA",
+          color: "#0A0A0A",
+          border: "none",
+          padding: "16px 40px",
+          borderRadius: "8px",
+          fontWeight: "bold",
+          cursor: "pointer",
+          fontSize: "18px"
+        }}>
+          Start Free Today →
+        </button>
+      </div>
+
+      {/* Footer */}
+      <div style={{
+        borderTop: "1px solid #1E1E1E",
+        padding: "32px 60px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      }}>
+        <span style={{color: "#00D4AA", fontWeight: "bold", fontSize: "20px"}}>FinOS</span>
+        <span style={{color: "#888888", fontSize: "14px"}}>
+          Financial Intelligence for Indian Businesses
+        </span>
+      </div>
     </div>
   )
+  
 }
