@@ -12,13 +12,30 @@ from app.models import expense
 from app.models import bank_transaction
 from app.api import warehouse
 from app.api import intelligence
+from fastapi.middleware.cors import CORSMiddleware
 Base.metadata.create_all(bind=engine)
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI(title="FinOS", ...)
+
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ... your routes below
 app = FastAPI(
     title="FinOS",
     description="Financial Brain",
     version="1.0.0"
 )
+
+
 
 app.add_middleware(
     CORSMiddleware,
