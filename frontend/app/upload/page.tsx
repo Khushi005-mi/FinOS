@@ -26,7 +26,7 @@ export default function Upload() {
 
   // ---------- Constants ----------
   const CLIENT_ID = "f1e0c59b-73ff-4a4c-b963-9c62ed68721d";
-  const BASE_URL = "http://localhost:8000"  // ---------- Main processing function ----------
+  const BASE_URL = "https://finos-backend.vercel.app"
   const processData = async () => {
     // 1. Validate that all three files are selected
     if (!salesFile || !expensesFile || !bankFile) {
